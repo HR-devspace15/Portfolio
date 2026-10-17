@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block title %}Home - My Portfolio{% endblock %} 
+{%block content %} 
+{% load static %}
+<div class="container">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img
+        src="{% static 'css/images/hero.png' %}"
+        class="d-block mx-lg-auto img-fluid"
+        alt="Bootstrap Themes"
+        width="700"
+        height="300"
+        loading="lazy"
+        class="hero-img"
+      />
+    </div>
+    <div class="col-lg-6">
+      <p class="lead">Hi, I'm <em>Hafsa Rashid</em></p>
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        HR Web Developer
+      </h1>
+      <p class="lead">
+        I build modern, responsive & user-friendly websites. A Web Developer who
+        turns ideas into digital experiences. I create responsive websites and
+        web applications with modern technologies, clean design, and a focus on
+        user experience. Let's build something amazing. 🚀
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">
+          View My Projects
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-lg px-4">
+          Explore my Skills
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <h1 class="display-4 py-4 text-center">Featured projects</h1>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src='{% static 'css/images/amazon.png' %}' class="card-img-top" alt="Project Image" height="250px">
+        <div class="card-body">
+          <p class="card-text">
+            A responsive Amazon-inspired e-commerce website featuring a clean user interface and product browsing layout, built to practice front-end web development skills.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src='{% static 'css/images/image.png' %}' class="card-img-top" alt="Project Image" height="250px">
+        <div class="card-body">
+          <p class="card-text">
+            A modern and user-friendly login page featuring a clean design and input fields for user authentication, built to practice web design and form handling.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img src='{% static 'css/images/weather.png' %}' class="card-img-top" alt="Project Image" height="250px">
+        <div class="card-body">
+          <p class="card-text">
+            A responsive weather application that displays current weather information for different locations using a weather API, with a simple and intuitive interface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
