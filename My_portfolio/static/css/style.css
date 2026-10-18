@@ -1,3 +1,11 @@
+*{
+    color :red;
+}
 .hero-img{
     border-radius:10%;
+}
+@media(min-width:574px){
+    .hero-img{
+        margin-left:20px;
+    }
 }

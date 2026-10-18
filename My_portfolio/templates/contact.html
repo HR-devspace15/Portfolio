@@ -6,12 +6,22 @@
     {% endblock %}
 {% block content %}
 <div class="container my-5 py-5 text-center">
+  {% if messages %}
+{% for message in messages %}
+ <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-5" role="alert">
+  {{ message }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> 
+{% endfor %}
+{% endif %}
     <main class="form-signin w-100 m-auto main">
-      <form>
+      <form method="post">
+        {% csrf_token %}
         <h1 class="h3 mb-3 fw-normal"><em>Please Give Your Info</em></h1>
         <div class="form-floating my-5">
           <input
             type="email"
+            name="email"
             class="form-control"
             id="floatingInput"
             placeholder="name@example.com"
@@ -20,7 +30,8 @@
         </div>
         <div class="form-floating my-5">
           <input
-            type="username"
+            type="text"
+            name="name"
             class="form-control"
             id="floatingInput"
             placeholder="username"
@@ -31,6 +42,7 @@
         <div class="form-floating">
           <input
             type="password"
+            name="password"
             class="form-control"
             id="floatingPassword"
             placeholder="Password"
@@ -39,12 +51,13 @@
         </div>
         <div class="form-floating my-5  ">
           <input
-            type="text"
+            type=""
+            name="desc"
             class="form-control msg"
-            id="message"
-            placeholder="text"
+            id="desc"
+            placeholder="desc"
           />
-          <label for="message">Drop your message here</label>
+          <label for="desc">Drop your message here</label>
         </div>
         <div class="form-check text-start my-3">
           <input

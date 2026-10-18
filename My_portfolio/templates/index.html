@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
-{% block title %}Home - My Portfolio{% endblock %} 
-{%block content %} 
 {% load static %}
+{% block title %}Home - My Portfolio{% endblock %} 
+  {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endcomment %}
+{%block content %} 
 <div class="container">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
@@ -42,7 +43,7 @@
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     <div class="col">
       <div class="card shadow-sm">
-        <img src='{% static 'css/images/amazon.png' %}' class="card-img-top" alt="Project Image" height="250px">
+        <img src='{% static 'css/images/amazon.png' %}' class="card-img-top" alt="Project Image" height="230px">
         <div class="card-body">
           <p class="card-text">
             A responsive Amazon-inspired e-commerce website featuring a clean user interface and product browsing layout, built to practice front-end web development skills.
