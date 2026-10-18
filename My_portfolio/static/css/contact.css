@@ -1,0 +1,15 @@
+
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.main div{
+    width :90vmin;
+}
+
+.msg{
+    height :20vh
+}

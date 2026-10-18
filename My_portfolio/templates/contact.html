@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Contact - My Portfolio{% endblock %}
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
-</head>
+    {% block extra_css %}
+      <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    {% endblock %}
 {% block content %}
 <div class="container my-5 py-5 text-center">
-    <main class="form-signin w-100 m-auto">
+    <main class="form-signin w-100 m-auto main">
       <form>
         <h1 class="h3 mb-3 fw-normal"><em>Please Give Your Info</em></h1>
         <div class="form-floating my-5">
@@ -27,7 +25,7 @@
             id="floatingInput"
             placeholder="username"
           />
-          <label for="floatingInput">Username</label>
+          <label for="floatingInput">UserName</label>
         </div>
 
         <div class="form-floating">
@@ -42,11 +40,11 @@
         <div class="form-floating my-5  ">
           <input
             type="text"
-            class="form-control "
-            id="floatingInput"
+            class="form-control msg"
+            id="message"
             placeholder="text"
           />
-          <label for="floatingInput">Drop your message here</label>
+          <label for="message">Drop your message here</label>
         </div>
         <div class="form-check text-start my-3">
           <input
